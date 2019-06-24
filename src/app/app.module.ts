@@ -32,7 +32,7 @@ import { AppFooterModule } from './app-footer/app-footer.module';
         SearchMovieComponent,
         SearchStarComponent
     ],
-    providers: [],
+    providers: [InMemoryDataService],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

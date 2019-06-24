@@ -12,14 +12,14 @@
                 <h4>Name 2:</h4>
             </label>
             <input class="card-item-text" type="search" [(ngModel)]="searchStar2" name="searchStar2">
-            <input class="card-item-button" type="submit" value="SEARCH" (click)='SearchStar()'>
+            <input class="card-item-button" type="submit" value="SEARCH" (click)='searchStar()'>
         </form>
         <ul>
-            <!-- <li *ngFor="let star of stars">
+            <li *ngFor="let star of movieIds">
                 <div>
-                    <h4>{{star.name}}</h4>
+                    <h4>{{star}}</h4>
                 </div>
-            </li> -->
+            </li>
         </ul>
         <form class="main-card-item">
             <h4 class="card-item-title">Two Titles in Same People</h4>
@@ -31,7 +31,7 @@
                 <h4>Name 2:</h4>
             </label>
             <input class="card-item-text" type="search" [(ngModel)]="searchMovie2" name="searchMovie2">
-            <input class="card-item-button" type="submit" value="SEARCH" (click)='SearchMovie()'>
+            <input class="card-item-button" type="submit" value="SEARCH" (click)='searchMovie()'>
         </form>
     </div>
 </div>

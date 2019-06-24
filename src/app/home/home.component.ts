@@ -1,85 +1,48 @@
 import { HttpClient } from '@angular/common/http';
 import { OnInit, Component } from '@angular/core';
 import { Movie } from '../movie';
-import { tap, catchError, find, map, filter, mergeAll, flatMap, every, mergeMap } from 'rxjs/operators';
-import { throwError, Observable, of } from 'rxjs';
+import { tap, catchError, find, map, filter, mergeAll, flatMap, every, mergeMap, mapTo } from 'rxjs/operators';
+import { throwError, Observable, of, merge } from 'rxjs';
 import { Star } from '../star';
+import { MovieStarService } from '../services/movie-star.service';
 
 @Component({
     selector: 'home-page',
     styleUrls: ['./home.component.css'],
     templateUrl: './home.component.html',
+    providers: [MovieStarService]
 })
 export class HomeComponent implements OnInit {
-    public searchStar1: string = "Jennifer Lawrence";
+    public searchStar1: string = 'Jennifer Lawrence';
     public searchStar2: string = "Chris Pratt";
     public searchMovie1: string;
     public searchMovie2: string;
     public person: Observable<Star[]>;
     public stars: Star[];
+    public movieIds: number[] = [];
 
-    constructor(public http: HttpClient) {
+    constructor(public http: HttpClient, public movieStarService: MovieStarService) {
     }
 
     public ngOnInit() {
-        console.log('OnInit');
-        this.getShowStars();
-
+        //
     }
 
-    public SearchMovie() {
-        this.getMovies().subscribe((el) => { console.log("subscribe bitti") });
+    public searchStar() {
+
+        this.movieStarService.getMovieIdsByStarName(this.searchStar1).subscribe((star1Movies) => {
+            this.movieStarService.getMovieIdsByStarName(this.searchStar2).subscribe((star2Movies) => {
+                this.movieIds = star1Movies.filter(value => star2Movies.includes(value));
+                // 1) oku
+                // 2) getMoviesByIds [2, 3]
+                // 3) filmleri listele
+                // 4) filme tiklayinca, filmin sayfasina git /movie/id
+                // 5) resolver kullan
+            });
+        });
     }
 
-    public SearchStar() {
-        this.getStarByName(2).subscribe((el) => { console.log(el, "subscribe bittiasdad") });
+    public searchMovie() {
+        this.movieStarService.getMovies().subscribe((el) => { console.log("getMovies ends") });
     }
-
-    public getMovies(): Observable<Movie[]> {
-        return this.http.get<Movie[]>('api/movies').pipe(
-            tap(data => console.log(data)),
-            catchError(err => {
-                console.log(err);
-                return throwError(err);
-            })
-        )
-    }
-
-    public getStars(): Observable<Star[]> {
-        return this.http.get<Star[]>('api/stars').pipe(
-            catchError(this.handleError<Star[]>('getStars', []))
-        );
-    }
-    //star isimlerini anasayfada göstermeyi denedim.
-    public getShowStars(): void {
-        this.getStars()
-            .subscribe(stars => this.stars = stars);
-    }
-
-    public getStarByName(id: number): Observable<Star> {
-        const url = `${this.starUrl}/${id}`
-        return this.http.get<Star>(url).pipe(
-            catchError(this.handleError<Star>(`getStarByName=${id}`))
-        )
-    }
-
-    private starUrl = 'api/stars';
-    private handleError<T>(operation = 'operation', result?: T) {
-        return (error: any): Observable<T> => {
-            console.error(error);
-            return of(result as T);
-        };
-    }
-
-
-    // public getStars(): Observable<Star[]> {
-    //     return this.http.get<Star[]>('api/stars/2').pipe(
-    //         tap(data => console.log(data)),
-    //         catchError(err => {
-    //             console.log(err);
-    //             return throwError(err);
-    //         })
-    //     )
-    // }
-
 }
