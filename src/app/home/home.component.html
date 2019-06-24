@@ -1,0 +1,37 @@
+<div class="main-area">
+    <h2 class="main-title">Collaborations</h2>
+    <h5 class="main-subtitle">Both fields required for each search</h5>
+    <div class="main-cards">
+        <form class="main-card-item">
+            <h4 class="card-item-title">Two People in Same Title</h4>
+            <label class="card-item-name">
+                <h4>Name 1:</h4>
+            </label>
+            <input class="card-item-text" type="search" [(ngModel)]="searchStar1" name="searchStar1">
+            <label class="card-item-name">
+                <h4>Name 2:</h4>
+            </label>
+            <input class="card-item-text" type="search" [(ngModel)]="searchStar2" name="searchStar2">
+            <input class="card-item-button" type="submit" value="SEARCH" (click)='SearchStar()'>
+        </form>
+        <ul>
+            <li *ngFor="let star of stars">
+                <div>
+                    <h4>{{star.name}}</h4>
+                </div>
+            </li>
+        </ul>
+        <form class="main-card-item">
+            <h4 class="card-item-title">Two Titles in Same People</h4>
+            <label class="card-item-name">
+                <h4>Name 1:</h4>
+            </label>
+            <input class="card-item-text" type="search" [(ngModel)]="searchMovie1" name="searchMovie1">
+            <label class="card-item-name">
+                <h4>Name 2:</h4>
+            </label>
+            <input class="card-item-text" type="search" [(ngModel)]="searchMovie2" name="searchMovie2">
+            <input class="card-item-button" type="submit" value="SEARCH" (click)='SearchMovie()'>
+        </form>
+    </div>
+</div>

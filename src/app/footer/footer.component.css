@@ -1,0 +1,53 @@
+footer {
+    background-color: rgb(236, 236, 236);
+    padding: 1% 2% 2% 2%;
+}
+
+.footer-company {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-company-name {
+    display: inline-block;
+    font-size: 1.3rem;
+    margin-left: 0;
+}
+
+.footer-copyright {
+    display: inline-block;
+    margin-right: 0;
+}
+
+.footer-copyright .copy {
+    color: deepskyblue;
+}
+
+.footer-links {
+    display: inline-block;
+    width: 96%;
+}
+
+.footer-link-title {
+    color: deepskyblue;
+    margin-bottom: 0px
+}
+
+.link-item {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 0.812rem;
+}
+
+@media only screen and (min-width: 768px) {
+    .footer-links {
+        width: 32%;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .footer-links {
+        width: 16%;
+    }
+}

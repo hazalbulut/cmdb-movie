@@ -1,0 +1,36 @@
+.main-area {
+    padding: 5rem 0;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.main-title {
+    font-weight: 600;
+}
+
+.main-card-item {
+    display: inline-block;
+    border: 1px solid #797979;
+    border-radius: 10px;
+    width: 48%;
+    padding: 1rem;
+    margin: 1%;
+    max-width: 480px;
+}
+
+.card-item-title {
+    color: goldenrod;
+}
+
+.card-item-text {
+    width: 100%;
+}
+
+.card-item-button {
+    background-color: dodgerblue;
+    color: #ffffff;
+    padding: 0.5rem 0.8rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 3px;
+}

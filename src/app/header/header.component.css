@@ -1,0 +1,17 @@
+header {
+  background-color: black;
+  height: 100px;
+  padding-top: 1.406rem;
+  padding-left: 1rem;
+}
+
+.header-logo {
+  display: inline-block;
+  background-color: goldenrod;
+  padding: 0.5rem 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  color: black;
+}
