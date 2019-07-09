@@ -1,48 +1,38 @@
-import { HttpClient } from '@angular/common/http';
+
 import { OnInit, Component } from '@angular/core';
-import { Movie } from '../movie';
-import { tap, catchError, find, map, filter, mergeAll, flatMap, every, mergeMap, mapTo } from 'rxjs/operators';
-import { throwError, Observable, of, merge } from 'rxjs';
-import { Star } from '../star';
-import { MovieStarService } from '../services/movie-star.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { FormBuilder, Validators, FormGroup } from '@angular/forms';
+import { StarFormModel } from '../models/star-form';
+import { MovieFormModel } from '../models/movie-form';
+
 
 @Component({
     selector: 'home-page',
     styleUrls: ['./home.component.css'],
     templateUrl: './home.component.html',
-    providers: [MovieStarService]
 })
 export class HomeComponent implements OnInit {
-    public searchStar1: string = 'Jennifer Lawrence';
-    public searchStar2: string = "Chris Pratt";
-    public searchMovie1: string;
-    public searchMovie2: string;
-    public person: Observable<Star[]>;
-    public stars: Star[];
-    public movieIds: number[] = [];
-
-    constructor(public http: HttpClient, public movieStarService: MovieStarService) {
+    public starForm: FormGroup;
+    public movieForm: FormGroup;
+    constructor(public http: HttpClient, private route: ActivatedRoute, private router: Router, private fb: FormBuilder) {
     }
-
     public ngOnInit() {
-        //
-    }
-
-    public searchStar() {
-
-        this.movieStarService.getMovieIdsByStarName(this.searchStar1).subscribe((star1Movies) => {
-            this.movieStarService.getMovieIdsByStarName(this.searchStar2).subscribe((star2Movies) => {
-                this.movieIds = star1Movies.filter(value => star2Movies.includes(value));
-                // 1) oku
-                // 2) getMoviesByIds [2, 3]
-                // 3) filmleri listele
-                // 4) filme tiklayinca, filmin sayfasina git /movie/id
-                // 5) resolver kullan
-            });
+        this.starForm = this.fb.group({
+            searchStar1: ['Jennifer Lawrence', Validators.required],
+            searchStar2: ['Chris Pratt', Validators.required]
+        });
+        this.movieForm = this.fb.group({
+            searchMovie1: ['Passengers', Validators.required],
+            searchMovie2: ['Father!', Validators.required]
         });
     }
-
-    public searchMovie() {
-        this.movieStarService.getMovies().subscribe((el) => { console.log("getMovies ends") });
+    public onStarSubmit(model: StarFormModel, isValid: boolean) {
+        if (!isValid) { return; }
+        this.router.navigateByUrl('/search-movie?searchStar1=' + model.searchStar1 + '&searchStar2=' + model.searchStar2);
+    }
+    public onMovieSubmit(model: MovieFormModel, isValid: boolean) {
+        if (!isValid) { return; }
+        this.router.navigateByUrl('/search-star?searchMovie1=' + model.searchMovie1 + '&searchMovie2=' + model.searchMovie2);
     }
 }

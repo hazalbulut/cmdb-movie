@@ -36,6 +36,8 @@ export class InMemoryDataService implements InMemoryDbService {
                             Turner made her professional acting debut as Sansa Stark on the HBO fantasy television
                             series Game of Thrones (2011) (2011-2019), which brought her international recognition and critical praise.
                             For her performance, she has received four nominations for Screen Actors`,
+                            actorImage: 'https://www.google.com/search?q=sophie+turner&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjW9Omk5afjAhXJ6eAKHRdfDnMQ_AUIECgB&biw=1278&bih=927#imgrc=ESiJN3JeBe_urM:',
+
                         },
                         {
                             id: 2,
@@ -45,6 +47,8 @@ export class InMemoryDataService implements InMemoryDbService {
                             bio: `Was the highest-paid actress in the world in 2015 and 2016.
                              With her films grossing over $5.5 billion worldwide,
                              Jennifer Lawrence is often cited as the most successful actor of her generation`,
+                            actorImage: 'https://m.media-amazon.com/images/M/MV5BOTU3NDE5MDQ4MV5BMl5BanBnXkFtZTgwMzE5ODQ3MDI@._V1_UX214_CR0,0,214,317_AL_.jpg',
+
                         }
                     ],
                 plot: `Jean Grey begins to develop incredible powers that corrupt and turn her into a Dark Phoenix.
@@ -86,6 +90,8 @@ export class InMemoryDataService implements InMemoryDbService {
                             bio: `Was the highest-paid actress in the world in 2015 and 2016.
                             With her films grossing over $5.5 billion worldwide,
                             Jennifer Lawrence is often cited as the most successful actor of her generation`,
+                            actorImage: 'https://m.media-amazon.com/images/M/MV5BOTU3NDE5MDQ4MV5BMl5BanBnXkFtZTgwMzE5ODQ3MDI@._V1_UX214_CR0,0,214,317_AL_.jpg',
+
                         },
                         {
                             id: 3,
@@ -94,6 +100,8 @@ export class InMemoryDataService implements InMemoryDbService {
                             birthPlace: 'Virginia, Minnesota, USA',
                             bio: `Christopher Michael Pratt is an American film and television actor.
                             He came to prominence for his small-screen roles, including Bright Abbott in Everwood (2002)`,
+                            actorImage: 'https://media.vanityfair.com/photos/585c0eb32fcfde736cf462a0/master/w_1600%2Cc_limit/chris-pratt-february-vf-02-17-02.jpg',
+
                         }
                     ],
                 plot: `The spaceship, Starship Avalon, in its 120-year voyage to a distant colony planet known as the "Homestead Colony"
@@ -135,6 +143,59 @@ export class InMemoryDataService implements InMemoryDbService {
                         bio: `Was the highest-paid actress in the world in 2015 and 2016.
                         With her films grossing over $5.5 billion worldwide,
                         Jennifer Lawrence is often cited as the most successful actor of her generation`,
+                        actorImage: 'https://m.media-amazon.com/images/M/MV5BOTU3NDE5MDQ4MV5BMl5BanBnXkFtZTgwMzE5ODQ3MDI@._V1_UX214_CR0,0,214,317_AL_.jpg',
+
+                    }
+                ],
+
+                plot: 'A couple\'s relationship is tested when uninvited guests arrive at their home, disrupting their tranquil existence.',
+                language: 'English',
+                country: 'USA',
+                awards: '5 wins & 30 nominations.',
+                poster: 'https://m.media-amazon.com/images/M/MV5BMzc5ODExODE0MV5BMl5BanBnXkFtZTgwNDkzNDUxMzI@._V1_SX300.jpg',
+                ratings: '7.2',
+                metaScore: '75',
+                imdbRating: '6.6',
+                imdbVotes: '154,502',
+                imdbId: 'tt5109784',
+                type: 'movie',
+                dvd: '19 Dec 2017',
+                boxOffice: '$17,297,289',
+                production: 'Paramount Pictures',
+                website: 'http://www.mothermovie.com',
+                response: true
+            },
+            {
+                id: 4,
+                title: 'Father!',
+                year: 2017,
+                rated: 'R',
+                released: '15 Sep 2017',
+                runtime: '121 min',
+                genre: 'Drama, Horror, Mystery',
+                director: 'Darren Aronofsky',
+                writer: 'Darren Aronofsky',
+                actors: [
+                    {
+                        id: 2,
+                        name: 'Jennifer Lawrence',
+                        birthDate: '15 August 1990',
+                        birthPlace: 'Louisville, Kentucky, USA',
+                        bio: `Was the highest-paid actress in the world in 2015 and 2016.
+                        With her films grossing over $5.5 billion worldwide,
+                        Jennifer Lawrence is often cited as the most successful actor of her generation`,
+                        actorImage: 'https://m.media-amazon.com/images/M/MV5BOTU3NDE5MDQ4MV5BMl5BanBnXkFtZTgwMzE5ODQ3MDI@._V1_UX214_CR0,0,214,317_AL_.jpg',
+
+                    },
+                    {
+                        id: 3,
+                        name: 'Chris Pratt',
+                        birthDate: '21 JUn 1979',
+                        birthPlace: 'Virginia, Minnesota, USA',
+                        bio: `Christopher Michael Pratt is an American film and television actor.
+                        He came to prominence for his small-screen roles, including Bright Abbott in Everwood (2002)`,
+                        actorImage: 'https://media.vanityfair.com/photos/585c0eb32fcfde736cf462a0/master/w_1600%2Cc_limit/chris-pratt-february-vf-02-17-02.jpg',
+
                     }
                 ],
 
@@ -167,6 +228,7 @@ export class InMemoryDataService implements InMemoryDbService {
                 birthDate: '21 Feb 1996',
                 birthPlace: 'Northampton, Northamptonshire, England, UK',
                 bio: 'Sophie Belinda Jonas (née Turner; born February 21, 1996) is an English actress. Turner made her professional acting debut as Sansa Stark on the HBO fantasy television series Game of Thrones (2011) (2011-2019), which brought her international recognition and critical praise. For her performance, she has received four nominations for Screen Actors',
+                actorImage: 'https://www.google.com/search?q=sophie+turner&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjW9Omk5afjAhXJ6eAKHRdfDnMQ_AUIECgB&biw=1278&bih=927#imgrc=ESiJN3JeBe_urM:',
                 movies: [
                     {
                         id: 1,
@@ -203,7 +265,35 @@ export class InMemoryDataService implements InMemoryDbService {
                 birthDate: '15 August 1990',
                 birthPlace: 'Louisville, Kentucky, USA',
                 bio: 'Was the highest-paid actress in the world in 2015 and 2016. With her films grossing over $5.5 billion worldwide, Jennifer Lawrence is often cited as the most successful actor of her generation',
+                actorImage: 'https://m.media-amazon.com/images/M/MV5BOTU3NDE5MDQ4MV5BMl5BanBnXkFtZTgwMzE5ODQ3MDI@._V1_UX214_CR0,0,214,317_AL_.jpg',
                 movies: [
+                    {
+                        id: 1,
+                        title: 'Dark Phoenix',
+                        year: 2019,
+                        rated: 'PG-13',
+                        released: '05 Jun 2019',
+                        runtime: '113 min',
+                        genre: 'Action, Adventure, Sci-Fi',
+                        director: 'Simon Kinberg',
+                        writer: 'John Byrne (story "The Dark Phoenix Saga"), Chris Claremont (story "The Dark Phoenix Saga"), Dave Cockrum (story "The Dark Phoenix Saga"), Simon Kinberg, Jack Kirby (comic book created by), Stan Lee (comic book created by)',
+                        plot: 'Jean Grey begins to develop incredible powers that corrupt and turn her into a Dark Phoenix. Now the X-Men will have to decide if the life of a team member is worth more than all the people living in the world.',
+                        language: 'English',
+                        country: 'USA',
+                        awards: 'N/A',
+                        poster: 'https://m.media-amazon.com/images/M/MV5BMjAwNDgxNTI0M15BMl5BanBnXkFtZTgwNTY4MDI1NzM@._V1_SX300.jpg',
+                        ratings: '7.9',
+                        metaScore: 'N/A',
+                        imdbRating: 'N/A',
+                        imdbVotes: 'N/A',
+                        imdbId: 'tt6565702',
+                        type: 'movie',
+                        dvd: 'N/A',
+                        boxOffice: 'N/A',
+                        production: '20th Century Fox',
+                        website: 'https://movies.disney.com/dark-phoenix',
+                        response: true
+                    },
                     {
                         id: 2,
                         title: 'Passengers',
@@ -257,6 +347,33 @@ export class InMemoryDataService implements InMemoryDbService {
                         production: 'Paramount Pictures',
                         website: 'http://www.mothermovie.com',
                         response: true
+                    },
+                    {
+                        id: 4,
+                        title: 'Father!',
+                        year: 2017,
+                        rated: 'R',
+                        released: '15 Sep 2017',
+                        runtime: '121 min',
+                        genre: 'Drama, Horror, Mystery',
+                        director: 'Darren Aronofsky',
+                        writer: 'Darren Aronofsky',
+                        plot: 'A couple\'s relationship is tested when uninvited guests arrive at their home, disrupting their tranquil existence.',
+                        language: 'English',
+                        country: 'USA',
+                        awards: '5 wins & 30 nominations.',
+                        poster: 'https://m.media-amazon.com/images/M/MV5BMzc5ODExODE0MV5BMl5BanBnXkFtZTgwNDkzNDUxMzI@._V1_SX300.jpg',
+                        ratings: '7.2',
+                        metaScore: '75',
+                        imdbRating: '6.6',
+                        imdbVotes: '154,502',
+                        imdbId: 'tt5109784',
+                        type: 'movie',
+                        dvd: '19 Dec 2017',
+                        boxOffice: '$17,297,289',
+                        production: 'Paramount Pictures',
+                        website: 'http://www.mothermovie.com',
+                        response: true
                     }
                 ]
             },
@@ -266,6 +383,7 @@ export class InMemoryDataService implements InMemoryDbService {
                 birthDate: '21 JUn 1979',
                 birthPlace: 'Virginia, Minnesota, USA',
                 bio: 'Christopher Michael Pratt is an American film and television actor. He came to prominence for his small-screen roles, including Bright Abbott in Everwood (2002)',
+                actorImage: 'https://media.vanityfair.com/photos/585c0eb32fcfde736cf462a0/master/w_1600%2Cc_limit/chris-pratt-february-vf-02-17-02.jpg',
                 movies: [
                     {
                         id: 2,
@@ -293,6 +411,33 @@ export class InMemoryDataService implements InMemoryDbService {
                         production: 'Columbia Pictures',
                         website: 'http://www.passengersmovie.com/',
                         response: true
+                    },
+                    {
+                        id: 4,
+                        title: 'Father!',
+                        year: 2017,
+                        rated: 'R',
+                        released: '15 Sep 2017',
+                        runtime: '121 min',
+                        genre: 'Drama, Horror, Mystery',
+                        director: 'Darren Aronofsky',
+                        writer: 'Darren Aronofsky',
+                        plot: 'A couple\'s relationship is tested when uninvited guests arrive at their home, disrupting their tranquil existence.',
+                        language: 'English',
+                        country: 'USA',
+                        awards: '5 wins & 30 nominations.',
+                        poster: 'https://m.media-amazon.com/images/M/MV5BMzc5ODExODE0MV5BMl5BanBnXkFtZTgwNDkzNDUxMzI@._V1_SX300.jpg',
+                        ratings: '7.2',
+                        metaScore: '75',
+                        imdbRating: '6.6',
+                        imdbVotes: '154,502',
+                        imdbId: 'tt5109784',
+                        type: 'movie',
+                        dvd: '19 Dec 2017',
+                        boxOffice: '$17,297,289',
+                        production: 'Paramount Pictures',
+                        website: 'http://www.mothermovie.com',
+                        response: true
                     }
                 ]
             }
@@ -300,8 +445,4 @@ export class InMemoryDataService implements InMemoryDbService {
         return stars;
     }
 
-
-    genId(stars: Star[]): number {
-        return stars.length > 0 ? Math.max(...stars.map(star => star.id)) + 1 : 11;
-    }
 }

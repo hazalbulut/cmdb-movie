@@ -1,0 +1,22 @@
+.search-star-result{
+max-width: 1140px;
+margin:0 auto;
+}
+.odd{
+    background-color: rgb(255, 255, 255);
+}
+.even{
+    background-color: rgb(255, 247, 238);
+}
+.search-star-image{
+width:200px;
+}
+.search-star-image img{
+    width:100%;
+}
+.star-info-sub{
+    font-weight: 300;
+}
+.star-info-born{
+    font-weight: 300;
+}

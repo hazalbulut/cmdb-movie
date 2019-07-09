@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, throwError, from } from 'rxjs';
 import { Movie } from '../movie';
-import { tap, catchError, map, filter, flatMap, mergeMap } from 'rxjs/operators';
+import { tap, catchError, map, filter, flatMap, mergeMap, find } from 'rxjs/operators';
 import { Star } from '../star';
 import { HttpClient } from '@angular/common/http';
 
@@ -10,79 +10,83 @@ export class MovieStarService {
 
     public movieUrl = 'api/movies';
     public starUrl = 'api/stars';
+    public movieIds: number[];
 
     constructor(public http: HttpClient) {
     }
 
-
     public getMovies(): Observable<Movie[]> {
         return this.http.get<Movie[]>(this.movieUrl).pipe(
             catchError(err => throwError(err))
-        )
+        );
+    }
+
+    public getMoviesByIds(ids: number[]): Observable<Movie[]> {
+        return this.getMovies().pipe(
+            // tap(e => console.log(ids)),
+            map(el => el.filter(e => ids.includes(e.id))),
+            catchError(err => throwError(err))
+        );
+    }
+
+    public getMovieByTitle(movieName: string): Observable<Movie> {
+        return this.getMovies().pipe(
+            // tap(e => console.log(movieName)),
+            map(el => el.find(e => e.title == movieName)),
+            catchError(err => throwError(err))
+        );
+    }
+    public getStarsByTitle(movieTitle: string): Observable<Star[]> {
+        return this.getMovieByTitle(movieTitle).pipe(
+            // tap(e => console.log(e)),
+            map(el => el.actors),
+            catchError(err => throwError(err))
+        );
+    }
+
+
+    public getMovieById(movieId: number): Observable<Movie> {
+        return this.getMovies().pipe(
+            // tap(e => console.log(movieId)),
+            map(el => el.find(e => e.id == movieId)),
+            catchError(err => throwError(err))
+        );
+    }
+    public getMovieIdsByStarName(starName: string): Observable<number[]> {
+        return this.getStarByName(starName).pipe(
+            map(el => el.movies.map(e => e.id)),
+            // tap(e => console.log("deniyoruzzz2")),
+            tap(e => this.movieIds = e),
+            // tap(e => console.log(this.movieIds)),
+            catchError(err => throwError(err))
+        );
     }
 
     public getStars(): Observable<Star[]> {
         return this.http.get<Star[]>(this.starUrl).pipe(
+            // tap(e => console.log(e)),
             catchError(err => throwError(err))
-        )
+        );
     }
-
-    public searchStarByName(name: string): Observable<Star[]> {
-        return this.http.get<Star[]>(this.starUrl + '?name=^' + name).pipe(
-            catchError(err => throwError(err))
-        )
-    }
-
     public getStarByName(starName: string): Observable<Star> {
         return this.getStars().pipe(
+            // tap(e => console.log(starName)),
             map(el => el.find(e => e.name == starName)),
             catchError(err => throwError(err))
-        )
+        );
     }
 
     public getMoviesByStarName(starName: string): Observable<Movie[]> {
         return this.getStarByName(starName).pipe(
+            // tap(e => console.log(e)),
             map(el => el.movies),
             catchError(err => throwError(err))
-        )
+        );
     }
 
-    public getMovieIdsByStarName(starName: string): Observable<number[]> {
-        return this.getMoviesByStarName(starName).pipe(
-            map(el => el.map(e => e.id)),
-            catchError(err => throwError(err))
-        )
-    }
-
-
-
-
-
-    // public getMoviesByStarName(name: string): Observable<Movie[]> {
-    //     return this.http.get<Star[]>(this.starUrl + '?name=' + name).pipe(
-    //         map(el => {
-    //             console.log(el);
-
-    //             return el[0].movies
-    //         }),
+    // public searchStarByName(name: string): Observable<Star[]> {
+    //     return this.http.get<Star[]>(this.starUrl + '?name=^' + name).pipe(
     //         catchError(err => throwError(err))
-    //     )
+    //     );
     // }
-
-
-
-    // public getShowStars(): void {
-    //     this.getStars()
-    //         .subscribe(stars => this.stars = stars);
-    // }
-
-
-
-    // private handleError<T>(operation = 'operation', result?: T) {
-    //     return (error: any): Observable<T> => {
-    //         console.error(error);
-    //         return of(result as T);
-    //     };
-    // }
-
 }
