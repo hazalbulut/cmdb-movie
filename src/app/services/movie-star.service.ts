@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Observable, throwError, from } from 'rxjs';
-import { Movie } from '../movie';
+import { Movie } from '../models/movie';
 import { tap, catchError, map, filter, flatMap, mergeMap, find } from 'rxjs/operators';
-import { Star } from '../star';
+import { Star } from '../models/star';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable()

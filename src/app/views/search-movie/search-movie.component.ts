@@ -1,10 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { OnInit, Component } from '@angular/core';
-import { Movie } from '../movie';
+import { Movie } from '../../models/movie';
 import { tap, catchError, find, map, filter, mergeAll, flatMap, every, mergeMap, mapTo } from 'rxjs/operators';
 import { throwError, Observable, of, merge } from 'rxjs';
-import { Star } from '../star';
-import { MovieStarService } from '../services/movie-star.service';
+import { Star } from '../../models/star';
+import { MovieStarService } from '../../services/movie-star.service';
 import { SearchMovieRoutingModule } from './search-movie-routing.module';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HomeComponent } from '../home/home.component';

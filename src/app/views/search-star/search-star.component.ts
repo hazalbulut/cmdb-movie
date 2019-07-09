@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { MovieStarService } from '../services/movie-star.service';
+import { MovieStarService } from '../../services/movie-star.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Star } from '../star';
+import { Star } from '../../models/star';
 import { HttpClient } from '@angular/common/http';
 
 @Component({

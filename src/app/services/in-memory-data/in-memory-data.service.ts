@@ -1,7 +1,7 @@
 // tslint:disable
 import { InMemoryDbService } from 'angular-in-memory-web-api';
-import { Movie } from './movie';
-import { Star } from './star';
+import { Movie } from '../../models/movie';
+import { Star } from '../../models/star';
 
 export class InMemoryDataService implements InMemoryDbService {
     createDb() {

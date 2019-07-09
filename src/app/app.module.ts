@@ -6,12 +6,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService } from './in-memory-data.service';
-import { HomeModule } from './home/home.module';
-import { AppHeaderModule } from './app-header/app-header.module';
-import { AppFooterModule } from './app-footer/app-footer.module';
-import { SearchMovieModule } from './search-movie/search-movie.module';
-import { SearchStarModule } from './search-star/search-star-module';
+import { InMemoryDataService } from './services/in-memory-data/in-memory-data.service';
+import { HomeModule } from './views/home/home.module';
+import { AppHeaderModule } from './components/app-header/app-header.module';
+import { AppFooterModule } from './components/app-footer/app-footer.module';
+import { SearchMovieModule } from './views/search-movie/search-movie.module';
+import { SearchStarModule } from './views/search-star/search-star-module';
 
 @NgModule({
     imports: [

@@ -3,8 +3,8 @@ import { OnInit, Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
-import { StarFormModel } from '../models/star-form';
-import { MovieFormModel } from '../models/movie-form';
+import { StarFormModel } from '../../models/star-form';
+import { MovieFormModel } from '../../models/movie-form';
 
 
 @Component({
