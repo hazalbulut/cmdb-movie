@@ -11,8 +11,11 @@
                 <h4 class="movie-info-rating">{{movie.ratings}}</h4>
                 <p class="movie-info-plot">{{movie.plot}}</p>
                 <small class="movie-info-people"> <span>Director: </span>{{movie.director}}|</small>
-                <small>Actors: </small><small class="movie-info-people" *ngFor="let actor of movie.actors">
-                    <a href=""> {{actor.name}}</a></small>
+                <small>Actors: </small>
+                <small class="movie-info-people" *ngFor="let actor of movie.actors">
+                    <!-- <a href="/star/{{actor.id}}"> {{actor.name}}</a> -->
+                    <a routerLink="/star/{{actor.id}}"> {{actor.name}}</a>
+                </small>
             </div>
         </div>
     </div>

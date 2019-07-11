@@ -1,18 +1,34 @@
-.search-star-result{
-max-width: 1140px;
-margin:0 auto;
+.search-star-result {
+    margin: 0 auto;
+    max-width: 1140px;
 }
-.odd{
-    background-color: rgb(255, 255, 255);
+
+.odd {
+    display: flex;
+    background-color: rgb(238, 243, 245);
+    border: 1px solid #767a80;
 }
-.even{
-    background-color: rgb(255, 247, 238);
+
+.even {
+    display: flex;
+    background-color: rgb(226, 230, 231);
+    border: 1px solid #767a80;
 }
-.search-star-image{
-width:200px;
+
+
+.search-star-image {
+    display: inline-block;
+    width: 10%;
+    padding: 1rem;
 }
-.search-star-image img{
-    width:100%;
+
+.search-star-image img {
+    width: 100%;
+}
+
+.star-result-info {
+    display: inline-block;
+    width: 90%;
 }
 .star-info-sub{
     font-weight: 300;

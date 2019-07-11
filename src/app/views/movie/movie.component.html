@@ -1,0 +1,21 @@
+<section>
+    <div class="movie-result">
+        <div class="movie-header">
+            <div class="header-left">
+                <h1 class="movie-title">{{ movie.title }}<span>({{movie.year}})</span></h1>
+                <small>{{movie.rated}}| {{movie.runtime}}|{{movie.genre}}|{{movie.released}}</small>
+            </div>
+            <div class="header-right">{{movie.ratings}}</div>
+        </div>
+        <div class="movie-image">
+            <img src={{movie.poster}}>
+        </div>
+        <p class="movie-plot">{{movie.plot}}</p>
+        <div class="movie-info">
+            <div><strong>Director:</strong>{{movie.director}}</div>
+            <div><strong>Writers:</strong>{{movie.writer}}</div>
+            <div><strong>Stars: </strong><div class="movie-actors" *ngFor="let star of movie.actors"> <a routerLink="/star/{{star.id}}">{{star.name}}</a> </div>
+        </div>
+        </div>
+    </div>
+</section>

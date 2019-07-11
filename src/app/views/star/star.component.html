@@ -1,0 +1,16 @@
+<section>
+    <div class="search-star-result">
+            <div class="star-result-info">
+                <h3 class="star-info-name">{{ actor.name }}</h3>
+                <div class="search-star-image">
+                    <img src={{actor.image}}>
+                </div>
+                <h5 class="star-info-sub">{{ actor.bio }}</h5>
+                <h5 class="star-info-born">Born: {{ actor.birthDate }} in {{ actor.birthPlace }}</h5>
+                Filmography:
+                <div *ngFor="let movie of actor.movies">
+                    <a routerLink="/movie/{{movie.id}}" > {{ movie.title }}</a>
+                </div>
+            </div>
+    </div>
+</section>

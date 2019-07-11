@@ -1,20 +1,19 @@
-
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SearchMovieRoutingModule } from './search-movie-routing.module';
-import { SearchMovieComponent } from './search-movie.component';
+import { StarRoutingModule } from './star-routing.module';
+import { StarComponent } from './star.component';
 import { RouterModule } from '@angular/router';
 
 
 @NgModule({
     imports: [
         CommonModule,
-        SearchMovieRoutingModule,
+        StarRoutingModule,
         RouterModule
     ],
     declarations: [
-        SearchMovieComponent
+        StarComponent
     ]
 })
 
-export class SearchMovieModule { }
+export class StarModule { }

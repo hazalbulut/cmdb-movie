@@ -12,6 +12,9 @@ import { AppHeaderModule } from './components/app-header/app-header.module';
 import { AppFooterModule } from './components/app-footer/app-footer.module';
 import { SearchMovieModule } from './views/search-movie/search-movie.module';
 import { SearchStarModule } from './views/search-star/search-star-module';
+import { StarModule } from './views/star/star.module';
+import { MovieModule } from './views/movie/movie.module';
+
 
 @NgModule({
     imports: [
@@ -24,13 +27,15 @@ import { SearchStarModule } from './views/search-star/search-star-module';
         HomeModule,
         SearchMovieModule,
         SearchStarModule,
+        StarModule,
+        MovieModule,
         HttpClientModule,
         HttpClientInMemoryWebApiModule.forRoot(
             InMemoryDataService
         )
     ],
     declarations: [
-        AppComponent
+        AppComponent,
     ],
     providers: [InMemoryDataService],
     bootstrap: [AppComponent]

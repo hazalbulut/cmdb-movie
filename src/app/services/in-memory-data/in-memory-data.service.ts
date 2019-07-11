@@ -36,7 +36,7 @@ export class InMemoryDataService implements InMemoryDbService {
                             Turner made her professional acting debut as Sansa Stark on the HBO fantasy television
                             series Game of Thrones (2011) (2011-2019), which brought her international recognition and critical praise.
                             For her performance, she has received four nominations for Screen Actors`,
-                            actorImage: 'https://www.google.com/search?q=sophie+turner&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjW9Omk5afjAhXJ6eAKHRdfDnMQ_AUIECgB&biw=1278&bih=927#imgrc=ESiJN3JeBe_urM:',
+                            image: 'https://m.media-amazon.com/images/M/MV5BMjM5Mjg4MDQ3MF5BMl5BanBnXkFtZTgwMDA2MjkxMjI@._V1_.jpg',
 
                         },
                         {
@@ -47,7 +47,7 @@ export class InMemoryDataService implements InMemoryDbService {
                             bio: `Was the highest-paid actress in the world in 2015 and 2016.
                              With her films grossing over $5.5 billion worldwide,
                              Jennifer Lawrence is often cited as the most successful actor of her generation`,
-                            actorImage: 'https://m.media-amazon.com/images/M/MV5BOTU3NDE5MDQ4MV5BMl5BanBnXkFtZTgwMzE5ODQ3MDI@._V1_UX214_CR0,0,214,317_AL_.jpg',
+                            image: 'https://m.media-amazon.com/images/M/MV5BOTU3NDE5MDQ4MV5BMl5BanBnXkFtZTgwMzE5ODQ3MDI@._V1_UX214_CR0,0,214,317_AL_.jpg',
 
                         }
                     ],
@@ -90,7 +90,7 @@ export class InMemoryDataService implements InMemoryDbService {
                             bio: `Was the highest-paid actress in the world in 2015 and 2016.
                             With her films grossing over $5.5 billion worldwide,
                             Jennifer Lawrence is often cited as the most successful actor of her generation`,
-                            actorImage: 'https://m.media-amazon.com/images/M/MV5BOTU3NDE5MDQ4MV5BMl5BanBnXkFtZTgwMzE5ODQ3MDI@._V1_UX214_CR0,0,214,317_AL_.jpg',
+                            image: 'https://m.media-amazon.com/images/M/MV5BOTU3NDE5MDQ4MV5BMl5BanBnXkFtZTgwMzE5ODQ3MDI@._V1_UX214_CR0,0,214,317_AL_.jpg',
 
                         },
                         {
@@ -100,7 +100,7 @@ export class InMemoryDataService implements InMemoryDbService {
                             birthPlace: 'Virginia, Minnesota, USA',
                             bio: `Christopher Michael Pratt is an American film and television actor.
                             He came to prominence for his small-screen roles, including Bright Abbott in Everwood (2002)`,
-                            actorImage: 'https://media.vanityfair.com/photos/585c0eb32fcfde736cf462a0/master/w_1600%2Cc_limit/chris-pratt-february-vf-02-17-02.jpg',
+                            image: 'https://media.vanityfair.com/photos/585c0eb32fcfde736cf462a0/master/w_1600%2Cc_limit/chris-pratt-february-vf-02-17-02.jpg',
 
                         }
                     ],
@@ -143,7 +143,7 @@ export class InMemoryDataService implements InMemoryDbService {
                         bio: `Was the highest-paid actress in the world in 2015 and 2016.
                         With her films grossing over $5.5 billion worldwide,
                         Jennifer Lawrence is often cited as the most successful actor of her generation`,
-                        actorImage: 'https://m.media-amazon.com/images/M/MV5BOTU3NDE5MDQ4MV5BMl5BanBnXkFtZTgwMzE5ODQ3MDI@._V1_UX214_CR0,0,214,317_AL_.jpg',
+                        image: 'https://m.media-amazon.com/images/M/MV5BOTU3NDE5MDQ4MV5BMl5BanBnXkFtZTgwMzE5ODQ3MDI@._V1_UX214_CR0,0,214,317_AL_.jpg',
 
                     }
                 ],
@@ -184,7 +184,7 @@ export class InMemoryDataService implements InMemoryDbService {
                         bio: `Was the highest-paid actress in the world in 2015 and 2016.
                         With her films grossing over $5.5 billion worldwide,
                         Jennifer Lawrence is often cited as the most successful actor of her generation`,
-                        actorImage: 'https://m.media-amazon.com/images/M/MV5BOTU3NDE5MDQ4MV5BMl5BanBnXkFtZTgwMzE5ODQ3MDI@._V1_UX214_CR0,0,214,317_AL_.jpg',
+                        image: 'https://m.media-amazon.com/images/M/MV5BOTU3NDE5MDQ4MV5BMl5BanBnXkFtZTgwMzE5ODQ3MDI@._V1_UX214_CR0,0,214,317_AL_.jpg',
 
                     },
                     {
@@ -194,7 +194,7 @@ export class InMemoryDataService implements InMemoryDbService {
                         birthPlace: 'Virginia, Minnesota, USA',
                         bio: `Christopher Michael Pratt is an American film and television actor.
                         He came to prominence for his small-screen roles, including Bright Abbott in Everwood (2002)`,
-                        actorImage: 'https://media.vanityfair.com/photos/585c0eb32fcfde736cf462a0/master/w_1600%2Cc_limit/chris-pratt-february-vf-02-17-02.jpg',
+                        image: 'https://media.vanityfair.com/photos/585c0eb32fcfde736cf462a0/master/w_1600%2Cc_limit/chris-pratt-february-vf-02-17-02.jpg',
 
                     }
                 ],
@@ -228,7 +228,7 @@ export class InMemoryDataService implements InMemoryDbService {
                 birthDate: '21 Feb 1996',
                 birthPlace: 'Northampton, Northamptonshire, England, UK',
                 bio: 'Sophie Belinda Jonas (née Turner; born February 21, 1996) is an English actress. Turner made her professional acting debut as Sansa Stark on the HBO fantasy television series Game of Thrones (2011) (2011-2019), which brought her international recognition and critical praise. For her performance, she has received four nominations for Screen Actors',
-                actorImage: 'https://www.google.com/search?q=sophie+turner&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjW9Omk5afjAhXJ6eAKHRdfDnMQ_AUIECgB&biw=1278&bih=927#imgrc=ESiJN3JeBe_urM:',
+                image: 'https://m.media-amazon.com/images/M/MV5BMjM5Mjg4MDQ3MF5BMl5BanBnXkFtZTgwMDA2MjkxMjI@._V1_.jpg',
                 movies: [
                     {
                         id: 1,
@@ -265,7 +265,7 @@ export class InMemoryDataService implements InMemoryDbService {
                 birthDate: '15 August 1990',
                 birthPlace: 'Louisville, Kentucky, USA',
                 bio: 'Was the highest-paid actress in the world in 2015 and 2016. With her films grossing over $5.5 billion worldwide, Jennifer Lawrence is often cited as the most successful actor of her generation',
-                actorImage: 'https://m.media-amazon.com/images/M/MV5BOTU3NDE5MDQ4MV5BMl5BanBnXkFtZTgwMzE5ODQ3MDI@._V1_UX214_CR0,0,214,317_AL_.jpg',
+                image: 'https://m.media-amazon.com/images/M/MV5BOTU3NDE5MDQ4MV5BMl5BanBnXkFtZTgwMzE5ODQ3MDI@._V1_UX214_CR0,0,214,317_AL_.jpg',
                 movies: [
                     {
                         id: 1,
@@ -383,7 +383,7 @@ export class InMemoryDataService implements InMemoryDbService {
                 birthDate: '21 JUn 1979',
                 birthPlace: 'Virginia, Minnesota, USA',
                 bio: 'Christopher Michael Pratt is an American film and television actor. He came to prominence for his small-screen roles, including Bright Abbott in Everwood (2002)',
-                actorImage: 'https://media.vanityfair.com/photos/585c0eb32fcfde736cf462a0/master/w_1600%2Cc_limit/chris-pratt-february-vf-02-17-02.jpg',
+                image: 'https://media.vanityfair.com/photos/585c0eb32fcfde736cf462a0/master/w_1600%2Cc_limit/chris-pratt-february-vf-02-17-02.jpg',
                 movies: [
                     {
                         id: 2,

@@ -76,6 +76,21 @@ export class MovieStarService {
         );
     }
 
+    public getStarsByNames(names: string[]): Observable<Star[]> {
+        return this.getStars().pipe(
+
+            map(el => el.filter(e => names.includes(e.name))),
+            catchError(err => throwError(err))
+        );
+    }
+
+    public getStarById(id:number):Observable<Star>{
+        return this.getStars().pipe(
+            map(e=>e.find(el=>el.id==id)),
+            catchError(err=>throwError(err))
+        )
+    }
+
     public getMoviesByStarName(starName: string): Observable<Movie[]> {
         return this.getStarByName(starName).pipe(
             // tap(e => console.log(e)),

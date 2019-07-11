@@ -44,7 +44,6 @@ export class SearchMovieComponent implements OnInit {
                         }
                     }
                 }
-
                 this.movieStarService.getMoviesByIds(this.idData).subscribe((res) => {
                    this.movieData = res;
                 });

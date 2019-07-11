@@ -7,5 +7,5 @@ export class Star {
     birthPlace: string;
     bio: string;
     movies?: Movie[];
-    actorImage:string;
+    image:string;
 }

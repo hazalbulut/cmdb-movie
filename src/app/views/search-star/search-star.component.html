@@ -2,14 +2,13 @@
     <div class="search-star-result">
         <h1 class="search-star-title">Star with {{searchMovie1}},{{searchMovie2}}</h1>
         <div *ngFor="let star of starData;let i=index;let even=even;let odd=odd" [ngClass]="{ odd: odd, even: even }">
-            <div class="star-result-info">
-                <h3 class="star-info-name">{{i+1}}. {{star.name}}</h3>
-                <div class="search-star-image">
-                    <img src={{star.actorImage}}>
+            <div class="search-star-image">
+                    <img src={{star.image}}>
                 </div>
+                <div class="star-result-info">
+                <h3 class="star-info-name">{{i+1}}. <a routerLink="/star/{{star.id}}">{{star.name}}</a></h3>
                 <h5 class="star-info-sub">{{star.bio}}</h5>
                 <h5 class="star-info-born">Born: {{star.birthDate}} in {{star.birthPlace}}</h5>
-                Filmography:
             </div>
         </div>
     </div>

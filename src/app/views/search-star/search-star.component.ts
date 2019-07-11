@@ -15,6 +15,7 @@ export class SearchStarComponent implements OnInit {
     public searchMovie1: string;
     public searchMovie2: string;
     public starData: Star[] = [];
+    public nameData:string[]=[];
 
 
     constructor(public http: HttpClient, public movieStarService: MovieStarService, private route: ActivatedRoute, private router: Router) { }
@@ -30,19 +31,17 @@ export class SearchStarComponent implements OnInit {
     public searchMovie() {
         this.movieStarService.getStarsByTitle(this.searchMovie1).subscribe((movie1Stars) => {
             this.movieStarService.getStarsByTitle(this.searchMovie2).subscribe((movie2Stars) => {
-                for (var i = 0, len = movie1Stars.length; i < len; i++) {
-                    for (var j = 0, len2 = movie2Stars.length; j < len2; j++) {
-                        if (movie1Stars[i].name === movie2Stars[j].name) {
-                            this.starData.push(...movie2Stars.splice(j, 1));
-                            len2 = movie2Stars.length;
+                for (let starOfMovie1 of movie1Stars) {
+                    for (let starOfMovie2 of movie2Stars) {
+                        if (starOfMovie1.name === starOfMovie2.name) {
+                            this.nameData.push(starOfMovie2.name);
                         }
                     }
                 }
-                console.log(this.starData);
-                console.log(this.starData.map(x => x.name))
+                this.movieStarService.getStarsByNames(this.nameData).subscribe((res)=>{
+                    this.starData=res;
+                });
             });
         });
     }
-
-
 }
