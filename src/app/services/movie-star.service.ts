@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Observable, throwError, from } from 'rxjs';
+import { Observable, throwError, from, of } from 'rxjs';
 import { Movie } from '../models/movie';
-import { tap, catchError, map, filter, flatMap, mergeMap, find } from 'rxjs/operators';
+import { tap, catchError, map, filter, flatMap, mergeMap, find, delay } from 'rxjs/operators';
 import { Star } from '../models/star';
 import { HttpClient } from '@angular/common/http';
 
@@ -84,10 +84,11 @@ export class MovieStarService {
         );
     }
 
-    public getStarById(id:number):Observable<Star>{
+    public getStarById(id: number): Observable<Star> {
         return this.getStars().pipe(
-            map(e=>e.find(el=>el.id==id)),
-            catchError(err=>throwError(err))
+            map(e => e.find(el => el.id == id)),
+            catchError((err) => of(err))
+
         )
     }
 

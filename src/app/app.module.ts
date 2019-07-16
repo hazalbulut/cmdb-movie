@@ -14,13 +14,13 @@ import { SearchMovieModule } from './views/search-movie/search-movie.module';
 import { SearchStarModule } from './views/search-star/search-star-module';
 import { StarModule } from './views/star/star.module';
 import { MovieModule } from './views/movie/movie.module';
+import { NotFoundModule } from './views/not-found/not-found.module';
 
 
 @NgModule({
     imports: [
         BrowserModule,
         CommonModule,
-        AppRoutingModule,
         FormsModule,
         AppHeaderModule,
         AppFooterModule,
@@ -29,10 +29,13 @@ import { MovieModule } from './views/movie/movie.module';
         SearchStarModule,
         StarModule,
         MovieModule,
+        NotFoundModule,
         HttpClientModule,
         HttpClientInMemoryWebApiModule.forRoot(
             InMemoryDataService
-        )
+        ),
+        AppRoutingModule
+
     ],
     declarations: [
         AppComponent,

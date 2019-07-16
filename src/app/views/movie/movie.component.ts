@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MovieStarService } from 'src/app/services/movie-star.service';
 import { Movie } from 'src/app/models/movie';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
     selector: 'app-movie',
@@ -14,17 +14,14 @@ export class MovieComponent implements OnInit {
     public id: string;
     public currentId: number;
     public movie: Movie;
-    constructor(private route: ActivatedRoute, public movieStarService: MovieStarService) { }
+    constructor(private route: ActivatedRoute, public movieStarService: MovieStarService,public router: Router) {
+        this.movie = this.route.snapshot.data.resolverData;
 
-    public ngOnInit() {
-        this.id = this.route.snapshot.paramMap.get('id');
-        this.currentId = +this.id;
-        this.resultMovie();
-    }
+        if (!this.movie || Object.keys(this.movie).length === 0) {
+            this.router.navigate(['/404']);
+            return;
+        }
+     }
 
-    public resultMovie() {
-        this.movieStarService.getMovieById(this.currentId).subscribe((res) => {
-            this.movie = res;
-        });
-    }
+    public ngOnInit() {}
 }

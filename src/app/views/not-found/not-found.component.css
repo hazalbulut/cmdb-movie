@@ -1,0 +1,45 @@
+.illustration {
+    text-align: center;
+    margin-top: 40px;
+    /* background-image: url("/assets/images/404.svg"); */
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    height: 460px;
+}
+
+.header {
+    width: 100%;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 5.5rem;
+    margin-bottom: 15px;
+}
+
+.header h2 {
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+    padding: 0 20px;
+}
+
+.home-button {
+    width: 160px;
+    margin: 0 auto;
+}
+
+@media (min-width: 992px) {
+    .header {
+        width: 60%;
+        padding: 0 10%;
+    }
+    .header h1 {
+        font-size: 7.625rem;
+    }
+    .illustration {
+        background-size: cover;
+        background-position: 300px 0px;
+        height: 535px;
+    }
+}

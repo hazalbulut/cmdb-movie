@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { StarRoutingModule } from './star-routing.module';
 import { StarComponent } from './star.component';
 import { RouterModule } from '@angular/router';
+import { MovieStarService } from 'src/app/services/movie-star.service';
 
 
 @NgModule({
@@ -13,7 +14,11 @@ import { RouterModule } from '@angular/router';
     ],
     declarations: [
         StarComponent
+    ],
+    providers: [
+        MovieStarService
     ]
+
 })
 
-export class StarModule { }
+export class StarModule {}
