@@ -1,21 +1,17 @@
-import { Component } from '@angular/core';
-import { Router, RouterEvent, NavigationStart, ResolveStart, ResolveEnd, ActivationEnd, NavigationEnd, NavigationCancel, NavigationError, GuardsCheckStart, ActivationStart, GuardsCheckEnd } from '@angular/router';
-import { StarComponent } from './views/star/star.component';
-import { StarResolverService } from './views/star/star.resolver';
-import { StarRoutingModule } from './views/star/star-routing.module';
+import { Component, OnInit } from '@angular/core';
+import { ActivationEnd, ActivationStart, GuardsCheckEnd, GuardsCheckStart, NavigationCancel, NavigationEnd, NavigationError, NavigationStart, ResolveEnd, ResolveStart, Router, RouterEvent, } from '@angular/router';
 
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-
+export class AppComponent implements OnInit {
     public showHeader: boolean = false;
     public showFooter: boolean = false;
     public showSpinner: boolean = true;
 
-    constructor(private router: Router ) {
+    constructor(private router: Router) {
 
     }
 
@@ -24,7 +20,6 @@ export class AppComponent {
             this.navigationInterceptor(event);
         });
     }
-
 
     public navigationInterceptor(event: RouterEvent): void {
 

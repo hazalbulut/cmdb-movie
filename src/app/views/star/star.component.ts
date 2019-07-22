@@ -1,4 +1,4 @@
-import { OnInit, Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Star } from 'src/app/models/star';
 
@@ -20,5 +20,6 @@ export class StarComponent implements OnInit {
     }
 
     public ngOnInit() {
+        //
     }
 }

@@ -1,4 +1,4 @@
-export class MovieFormModel{
-    searchMovie1:string;
-    searchMovie2:string;
-};
+export class MovieFormModel {
+    public searchMovie1: string;
+    public searchMovie2: string;
+}

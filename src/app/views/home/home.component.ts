@@ -1,11 +1,9 @@
-
-import { OnInit, Component } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { FormBuilder, Validators, FormGroup } from '@angular/forms';
-import { StarFormModel } from '../../models/star-form';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 import { MovieFormModel } from '../../models/movie-form';
-
+import { StarFormModel } from '../../models/star-form';
 
 @Component({
     selector: 'home-page',

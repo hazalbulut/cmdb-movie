@@ -1,7 +1,5 @@
-import { isPlatformServer } from '@angular/common';
-import { ChangeDetectionStrategy, Component, Inject, OnInit, Optional, PLATFORM_ID, ViewEncapsulation } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { Response } from 'express';
+
+import { ChangeDetectionStrategy, Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
     changeDetection: ChangeDetectionStrategy.Default,
@@ -13,9 +11,10 @@ import { Response } from 'express';
 })
 export class NotFoundComponent implements OnInit {
     constructor() {
+        //
     }
 
     public ngOnInit() {
-
+        //
     }
 }

@@ -1,4 +1,4 @@
-export class StarFormModel{
-    searchStar1:string;
-    searchStar2:string;
-};
+export class StarFormModel {
+    public searchStar1: string;
+    public searchStar2: string;
+}

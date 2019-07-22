@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { MovieStarService } from 'src/app/services/movie-star.service';
-import { Movie } from 'src/app/models/movie';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Movie } from 'src/app/models/movie';
+import { MovieStarService } from 'src/app/services/movie-star.service';
 
 @Component({
     selector: 'app-movie',
@@ -23,5 +23,7 @@ export class MovieComponent implements OnInit {
         }
      }
 
-    public ngOnInit() {}
+    public ngOnInit() {
+        //
+    }
 }
