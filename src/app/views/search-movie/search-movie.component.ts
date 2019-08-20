@@ -16,11 +16,14 @@ export class SearchMovieComponent implements OnInit {
     public movieData: Movie[] = [];
     public idData: number[] = [];
 
-    constructor(public http: HttpClient, public movieStarService: MovieStarService, private route: ActivatedRoute, private router: Router) {
-    }
+    constructor(
+        public http: HttpClient,
+        public movieStarService: MovieStarService,
+        private route: ActivatedRoute,
+        private router: Router
+    ) {}
 
     public ngOnInit() {
-
         this.route.queryParams.subscribe((params) => {
             this.searchStar1 = params.searchStar1;
             this.searchStar2 = params.searchStar2;
@@ -30,23 +33,19 @@ export class SearchMovieComponent implements OnInit {
 
     public searchStar() {
         this.movieStarService.getMoviesByStarName(this.searchStar1).subscribe((star1Movies) => {
-            this.movieStarService.getMoviesByStarName(this.searchStar2).subscribe((star2Movies) => {
-                for (const movieOfStar1 of star1Movies) {
-                    for (const movieOfStar2 of star2Movies) {
-                        if (movieOfStar1.title === movieOfStar2.title) {
-                            this.idData.push(movieOfStar2.id);
+                this.movieStarService.getMoviesByStarName(this.searchStar2).subscribe((star2Movies) => {
+                        for (const movieOfStar1 of star1Movies) {
+                            for (const movieOfStar2 of star2Movies) {
+                                if (movieOfStar1.title === movieOfStar2.title) {
+                                    this.idData.push(movieOfStar2.id);
+                                }
+                            }
                         }
-                    }
-                }
-                this.movieStarService.getMoviesByIds(this.idData).subscribe((res) => {
-                   this.movieData = res;
-                });
+                        this.movieStarService.getMoviesByIds(this.idData).subscribe((res) => {
+                                this.movieData = res;
+                            });
+                    });
             });
-        });
-    }
-
-    public searchMovie() {
-        this.movieStarService.getMovies().subscribe((el) => { console.log('getMovies ends');});
-    }
+        }
 
 }

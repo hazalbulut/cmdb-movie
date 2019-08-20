@@ -14,7 +14,7 @@ export class MovieResolverService implements Resolve<any> {
         console.log('RESOLVER');
         const id = route.paramMap.get('id');
         return this.movieStarService.getMovieById(Number(id)).pipe(
-            delay(10000)
+            delay(3000)
         );
     }
 }

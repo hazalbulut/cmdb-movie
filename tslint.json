@@ -108,11 +108,7 @@
         "no-output-on-prefix": true,
         "use-pipe-decorator": true,
         "use-pipe-transform-interface": true,
-        "component-class-suffix": [
-            true,
-            "Component",
-            ""
-        ],
+        "component-class-suffix": true,
         "directive-class-suffix": [
             true,
             "Directive",
